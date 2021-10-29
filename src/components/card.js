@@ -1,3 +1,4 @@
+import axios from "axios";
 const Card = (article) => {
   // TASK 5
   // ---------------------
@@ -33,8 +34,8 @@ const Card = (article) => {
   divImage.appendChild(img);
   author.appendChild(authorName);
   headline.textContent = article.headline;
-  img.src = article.authorPhoto
-  author.textContent = article.authorName
+  img.src = article.authorPhoto;
+  authorName.textContent = `By ${article.authorName}`
 
   divCard.addEventListener('click', () => {
     console.log(article.headline);
